@@ -1,0 +1,8 @@
+{
+    "name": "deployment",
+    "description": "Commands for preparing code for deployment",
+    "author": {
+        "name": "Arav Jain",
+        "email": "aravhawk@gmail.com"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+    "name": "claude-code-utils",
+    "description": "Directory of handy day-to-day Claude Code plugins built by Arav Jain",
+    "owner": {
+        "name": "Arav Jain",
+        "email": "aravhawk@gmail.com"
+    },
+    "plugins": [
+        {
+            "name": "deployment",
+            "description": "Commands for preparing code for deployment",
+            "author": {
+                "name": "Arav Jain",
+                "email": "aravhawk@gmail.com"
+            },
+            "source": "./plugins/deployment",
+            "category": "development"
+        },
+        {
+            "name": "god-mode",
+            "description": "Senior Software Architect mode with deep reasoning protocol",
+            "author": {
+                "name": "Arav Jain",
+                "email": "aravhawk@gmail.com"
+            },
+            "source": "./plugins/god-mode",
+            "category": "development"
+        },
+        {
+            "name": "npm-to-pnpm",
+            "description": "Migrates codebase from npm to pnpm",
+            "author": {
+                "name": "Arav Jain",
+                "email": "aravhawk@gmail.com"
+            },
+            "source": "./plugins/npm-to-pnpm",
+            "category": "development"
+        },
+        {
+            "name": "optimize-clean",
+            "description": "Optimizes and cleans up the codebase",
+            "author": {
+                "name": "Arav Jain",
+                "email": "aravhawk@gmail.com"
+            },
+            "source": "./plugins/optimize-clean",
+            "category": "development"
+        }
+    ]
+}

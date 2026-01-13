@@ -1,0 +1,38 @@
+{
+    "env": {
+      "API_TIMEOUT_MS": "600000",
+      "BASH_DEFAULT_TIMEOUT_MS": "600000",
+      "BASH_MAX_TIMEOUT_MS": "3600000",
+      "MCP_TIMEOUT": "120000",
+      "MCP_TOOL_TIMEOUT": "1800000"
+    },
+    "includeCoAuthoredBy": false,
+    "permissions": {
+      "allow": [
+        "WebSearch",
+        "WebFetch"
+      ],
+      "deny": []
+    },
+    "model": "opusplan",
+    "hooks": {
+      "Notification": [
+        {
+          "matcher": "permission_prompt",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "afplay /System/Library/Sounds/Glass.aiff && say \"Claude needs attention\""
+            }
+          ]
+        }
+      ]
+    },
+    "enabledPlugins": {
+      "feature-dev@claude-plugins-official": true,
+      "security-guidance@claude-plugins-official": true,
+      "code-simplifier@claude-plugins-official": true,
+      "frontend-design@claude-plugins-official": true
+    },
+    "alwaysThinkingEnabled": true
+  }

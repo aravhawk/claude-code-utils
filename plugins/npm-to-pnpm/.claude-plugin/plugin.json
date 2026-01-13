@@ -1,0 +1,8 @@
+{
+    "name": "npm-to-pnpm",
+    "description": "Migrates codebase from npm to pnpm",
+    "author": {
+        "name": "Arav Jain",
+        "email": "aravhawk@gmail.com"
+    }
+}
