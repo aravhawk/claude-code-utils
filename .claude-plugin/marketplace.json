@@ -18,13 +18,13 @@
             "category": "development"
         },
         {
-            "name": "god-mode",
-            "description": "Senior Software Architect mode with deep reasoning protocol",
+            "name": "extra-powers",
+            "description": "God-like powers for Claude Code",
             "author": {
                 "name": "Arav Jain",
                 "email": "aravhawk@gmail.com"
             },
-            "source": "./plugins/god-mode",
+            "source": "./plugins/extra-powers",
             "category": "development"
         },
         {
