@@ -16,26 +16,6 @@
             },
             "source": "./plugins/deployment",
             "category": "development"
-        },
-        {
-            "name": "extra-powers",
-            "description": "God-like powers for Claude Code",
-            "author": {
-                "name": "Arav Jain",
-                "email": "aravhawk@gmail.com"
-            },
-            "source": "./plugins/extra-powers",
-            "category": "development"
-        },
-        {
-            "name": "npm-to-pnpm",
-            "description": "Migrates codebase from npm to pnpm",
-            "author": {
-                "name": "Arav Jain",
-                "email": "aravhawk@gmail.com"
-            },
-            "source": "./plugins/npm-to-pnpm",
-            "category": "development"
         }
     ]
 }
