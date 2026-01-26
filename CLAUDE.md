@@ -1,7 +1,7 @@
 # Core rules (must follow)
 - Don't overcomplicate tasks.
-- Always check the web for up-to-date info and documentation (unless it's a stupid-easy task that doesn't require it).
-- Always cross-reference with Context7 (unless it's a stupid-easy task that doesn't require it).
+- Always check the web and for up-to-date info and documentation (unless it's a stupid-easy task that doesn't require it).
+- Along with the web, use Context7 when docs are needed about libraries and frameworks.
 - Plan every edge case when architecting any plan/product/feature.
 - Keep requirements file(s) up to date.
 - Before starting any task, check for `CLAUDE.md` and `AGENTS.md`: if both exist, read both and keep in context; if only one exists, read that one and keep in context; if neither exists, ignore both.
@@ -15,3 +15,5 @@
 - Prefer `git` via SSH over HTTPS unless instructed otherwise.
 - Call me Arav.
 - My GitHub username is aravhawk.
+- Assume I'm on the latest macOS unless stated otherwise.
+- I use an M3 Pro MacBook Pro.
