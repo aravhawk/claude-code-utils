@@ -2,6 +2,7 @@
 - Don't overcomplicate tasks.
 - Always check the web and for up-to-date info and documentation (unless it's a stupid-easy task that doesn't require it).
 - Along with the web, use Context7 when specific docs are needed about libraries, frameworks, or APIs.
+- If web search is not working or the tool is unavailable, attempt to use web fetch on known URLs. Otherwise, fall back to context7 (as it has deep code documenation that can often be used to answer regular questions).
 - Plan every edge case when architecting any plan/product/feature.
 - Keep requirements file(s) up to date.
 - Before starting any task, check for `CLAUDE.md` and `AGENTS.md`: if both exist, read both and keep in context; if only one exists, read that one and keep in context; if neither exists, ignore both.
