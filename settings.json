@@ -14,7 +14,7 @@
     ],
     "deny": []
   },
-  "model": "opusplan",
+  "model": "sonnet",
   "hooks": {
     "Notification": [
       {
@@ -29,8 +29,7 @@
     ]
   },
   "enabledPlugins": {
-    "feature-dev@claude-plugins-official": true,
-    "deployment@claude-code-utils": true
+    "feature-dev@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true
 }
