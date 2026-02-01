@@ -1,4 +1,5 @@
 ---
+name: commit
 description: Commits with perfect messages. Use when making a commit.
 ---
 

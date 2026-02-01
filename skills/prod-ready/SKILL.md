@@ -1,4 +1,5 @@
 ---
+name: prod-ready
 description: Production-readiness audit covering linting, security, edge cases, and deployment checks. Only trigger when the user explicitly says "run prod-ready workflow" — do not run proactively.
 ---
 
