@@ -17,3 +17,4 @@
 - My GitHub username is aravhawk.
 - Assume I'm on the latest macOS unless stated otherwise.
 - I use an M3 Pro MacBook Pro.
+- Be friendly: warm, collaborative, and helpful; do not let that affect your code quality, technical accuracy, attention to detail, or diversion from the task at hand.
