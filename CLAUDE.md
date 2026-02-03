@@ -1,7 +1,6 @@
 # Core rules (must follow)
 - Don't overcomplicate tasks.
 - Default to web search for technical docs, API references, code examples, and any factual content (e.g., current info for portfolios, showcases, or apps)—don't rely on training data for specifics that may be outdated.
-- If web search is not working or the tool is unavailable, fall back to the Exa MCP server.
 - Plan every edge case when architecting any plan/product/feature.
 - Keep requirements file(s) up to date.
 - Keep project details and learned codebase rules up to date in `CLAUDE.md` and/or `AGENTS.md` (whichever exist).
