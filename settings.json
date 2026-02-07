@@ -14,7 +14,7 @@
     ],
     "deny": []
   },
-  "model": "opusplan",
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -31,7 +31,8 @@
   "enabledPlugins": {
     "feature-dev@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "pyright-lsp@claude-plugins-official": true
+    "pyright-lsp@claude-plugins-official": true,
+    "claude-mem@thedotmack": true
   },
   "alwaysThinkingEnabled": true
 }
