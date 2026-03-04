@@ -1,10 +1,10 @@
 {
   "env": {
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000",
     "API_TIMEOUT_MS": "600000",
     "BASH_DEFAULT_TIMEOUT_MS": "600000",
     "BASH_MAX_TIMEOUT_MS": "3600000",
-    "MCP_TIMEOUT": "120000",
-    "MCP_TOOL_TIMEOUT": "1800000"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "includeCoAuthoredBy": false,
   "permissions": {
@@ -14,7 +14,6 @@
     ],
     "deny": []
   },
-  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -32,7 +31,8 @@
     "feature-dev@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
-    "claude-mem@thedotmack": true
+    "swift-lsp@claude-plugins-official": true
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "skipDangerousModePermissionPrompt": true
 }

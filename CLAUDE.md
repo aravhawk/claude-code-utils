@@ -4,16 +4,18 @@
 - Plan every edge case when architecting any plan/product/feature.
 - Keep requirements file(s) up to date.
 - If an `ARCHITECTURE.mmd` file exists, always keep it up to date with the latest changes in product architecture.
+- If you create a `CLAUDE.md` or `AGENTS.md` file, don't bloat it; agents are great at exploring codebases and figuring out commands typically. Keep learned rules, dependencies, and core architecture in there. Be intelligent about what you put in there. Don't leave out important details, but don't overcomplicate it either.
 - Keep project details, learned codebase rules, and core changes in the codebase up to date in `CLAUDE.md` and/or `AGENTS.md` (whichever exist).
 - Ensure `.gitignore` excludes unnecessary files/folders (e.g., `.DS_Store`, `__pycache__`, `.idea`). Use judgment so no unnecessary files are added to git. Do not exclude `CLAUDE.md`, `AGENTS.md`, or `.cursorrules`.
 - Never use venvs. When project-specific environments are needed, use conda.
 - Minimize use of emojis, especially in code and docs.
 
 ## Preferences
-- Prefer `pnpm` over `npm` unless instructed otherwise.
-- Always use Next.js for Node/pnpm projects unless instructed otherwise.
+- Prefer `pnpm` over `npm` unless instructed otherwise or a project is built with npm.
+- Always use the latest Next.js (with Turbopack) for Node/pnpm projects unless instructed otherwise.
 - Prefer `git` via SSH over HTTPS unless instructed otherwise.
 - Call me Arav.
+- My full name is Arav Jain (don't call me that in a conversation).
 - My GitHub username is aravhawk.
 - Assume I'm on the latest macOS unless stated otherwise.
 - I use an M3 Pro MacBook Pro.
