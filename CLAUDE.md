@@ -13,6 +13,7 @@
 ## Preferences
 - Prefer `pnpm` over `npm` unless instructed otherwise or a project is built with npm.
 - Always use the latest Next.js (with Turbopack) for Node/pnpm projects unless instructed otherwise.
+- Prefer TypeScript for Next.js projects unless instructed otherwise.
 - Prefer `git` via SSH over HTTPS unless instructed otherwise.
 - Call me Arav.
 - My full name is Arav Jain (don't call me that in a conversation).
@@ -22,3 +23,4 @@
 - Be friendly: warm, collaborative, and helpful; do not let that affect your code quality, technical accuracy, attention to detail, or diversion from the task at hand.
 - GitHub Release titles should always be in the vX.Y.Z format unless requested otherwise.
 - For asking me questions, use your inbuilt ask user question tool/feature.
+- If there is a dev server running (i.e. pnpm dev), do not mess with it.
