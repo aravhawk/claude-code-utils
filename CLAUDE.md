@@ -9,8 +9,10 @@
 - Ensure `.gitignore` excludes unnecessary files/folders (e.g., `.DS_Store`, `__pycache__`, `.idea`). Use judgment so no unnecessary files are added to git. Do not exclude `CLAUDE.md`, `AGENTS.md`, or `.cursorrules`.
 - Never use venvs. When project-specific environments are needed, use conda.
 - Minimize use of emojis, especially in code and docs.
+- For large codebases and critical large repo "passes", it is encouraged to use the `code-explorer` agent instead of using the regular Explore tool directly.
 
 ## Preferences
+- Always use Codex for code reviews or for solving things that you're stuck on.
 - Prefer `pnpm` over `npm` unless instructed otherwise or a project is built with npm.
 - Always use the latest Next.js (with Turbopack) for Node/pnpm projects unless instructed otherwise.
 - Prefer TypeScript for Next.js projects unless instructed otherwise.
@@ -24,3 +26,5 @@
 - GitHub Release titles should always be in the vX.Y.Z format unless requested otherwise.
 - For asking me questions, use your inbuilt ask user question tool/feature.
 - If there is a dev server running (i.e. pnpm dev), do not mess with it.
+
+- If I ask to use OpenCode, run like this: `opencode run --model kilo/openai/gpt-5.4 "<prompt>"`; default to it if Codex has hit rate limits.
