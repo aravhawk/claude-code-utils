@@ -1,18 +1,59 @@
 # Core rules (must follow)
-- Don't overcomplicate tasks.
-- Default to web search for technical docs, API references, code examples, and any factual content (e.g., current info for portfolios, showcases, or apps)—don't rely on training data for specifics that may be outdated.
+- Make every change as simple as possible, but as complex as necessary. ("We need things to be as complex as necessary, but as simple as possible" – Jensen Huang, 2026)
+- Always trace issues to their root cause and fix permanently -- never patch over symptoms.
+- Default to web search for technical docs, API references, code examples, and any factual content (e.g., current info for portfolios, showcases, or apps) -- don't rely on training data for specifics that may be outdated.
 - Plan every edge case when architecting any plan/product/feature.
 - Keep requirements file(s) up to date.
-- If an `ARCHITECTURE.mmd` file exists, always keep it up to date with the latest changes in product architecture.
-- If you create a `CLAUDE.md` or `AGENTS.md` file, don't bloat it; agents are great at exploring codebases and figuring out commands typically. Keep learned rules, dependencies, and core architecture in there. Be intelligent about what you put in there. Don't leave out important details, but don't overcomplicate it either.
-- Keep project details, learned codebase rules, and core changes in the codebase up to date in `CLAUDE.md` and/or `AGENTS.md` (whichever exist).
-- Ensure `.gitignore` excludes unnecessary files/folders (e.g., `.DS_Store`, `__pycache__`, `.idea`). Use judgment so no unnecessary files are added to git. Do not exclude `CLAUDE.md`, `AGENTS.md`, or `.cursorrules`.
+- If an `ARCHITECTURE.mmd` file exists, keep it up to date with the latest changes in product architecture.
+- If you create a `CLAUDE.md` or `AGENTS.md` file, keep it lean. Include learned rules, dependencies, and core architecture. Be intelligent about what you include -- cover important details without overcomplicating.
+- Keep project details, learned codebase rules, and core changes up to date in `CLAUDE.md` and/or `AGENTS.md` (whichever exist).
+- Ensure `.gitignore` excludes unnecessary files/folders (e.g., `.DS_Store`, `__pycache__`, `.idea`). Do not exclude `CLAUDE.md`, `AGENTS.md`, or `.cursorrules`.
 - Never use venvs. When project-specific environments are needed, use conda.
 - Minimize use of emojis, especially in code and docs.
-- For large codebases and critical large repo "passes", it is encouraged to use the `code-explorer` agent instead of using the regular Explore tool directly.
+
+## Workflow Discipline
+
+### Planning
+- If a task has 3+ steps or involves architectural decisions, enter plan mode first.
+- If the current approach isn't working, stop and re-plan from scratch.
+- Write detailed specs upfront. Verify the plan before implementing.
+- Use plan mode for verification steps too, not just building.
+
+### Subagent Strategy
+- Use subagents to keep the main context window clean. Assign one focused task per subagent.
+- Offload research, exploration, and parallel analysis to subagents. Launch multiple concurrently for independent subtasks.
+- For large codebases, prefer `code-explorer` over the regular Explore tool.
+
+### Self-Improvement Loop
+- After ANY correction: add the mistake pattern and a prevention rule to `tasks/lessons.md`.
+- At session start, review `tasks/lessons.md` for the relevant project (if it exists).
+- Example entry:
+  `### Incorrect import paths`
+  `Pattern: Used relative imports instead of the project's alias convention.`
+  `Rule: Always check existing imports in the file before adding new ones. Match the project's import style.`
+
+### Verification Before Done
+- Never mark a task complete without proving it works: run tests, check logs, demonstrate correctness.
+- Before presenting a solution, review it as if auditing someone else's PR. Ask: "Would I approve this in a code review?"
+- Diff behavior between main and your changes when relevant.
+
+### Elegance (non-trivial changes only)
+- For non-trivial changes, pause and consider whether a cleaner approach exists. Simplicity is the default; pursue elegance only when the simple path is a workaround rather than a real solution.
+- If a fix works around the problem rather than solving it directly, step back and implement the direct solution.
+- Skip this entirely for straightforward fixes.
+
+### Bug Fixing
+- Resolve bugs end-to-end: read logs, trace the error, fix the root cause, verify the fix. No plan mode needed unless the fix requires architectural changes.
+- Do not ask for intermediate guidance unless genuinely blocked on missing context.
+- Fix failing CI tests proactively when encountered.
+
+## Task Management
+- Break complex work into discrete, trackable tasks before starting. Use the agent's built-in task tools when available; fall back to `tasks/todo.md` with checkable items otherwise.
+- Summarize what changed at each major step.
+- Document results when the work is complete.
 
 ## Preferences
-- Always use Codex for code reviews or for solving things that you're stuck on.
+- Always use Codex for code reviews or for solving things that you're stuck on (only use your own code-reviewer agent when specifically told to do so).
 - Prefer `pnpm` over `npm` unless instructed otherwise or a project is built with npm.
 - Always use the latest Next.js (with Turbopack) for Node/pnpm projects unless instructed otherwise.
 - Prefer TypeScript for Next.js projects unless instructed otherwise.
