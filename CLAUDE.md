@@ -67,5 +67,3 @@
 - GitHub Release titles should always be in the vX.Y.Z format unless requested otherwise.
 - For asking me questions, use your inbuilt ask user question tool/feature.
 - If there is a dev server running (i.e. pnpm dev), do not mess with it.
-
-- If I ask to use OpenCode, run like this: `opencode run --model kilo/openai/gpt-5.4 "<prompt>"`; default to it if Codex has hit rate limits.
