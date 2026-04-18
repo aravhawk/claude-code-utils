@@ -10,6 +10,7 @@
 - Ensure `.gitignore` excludes unnecessary files/folders (e.g., `.DS_Store`, `__pycache__`, `.idea`). Do not exclude `CLAUDE.md`, `AGENTS.md`, or `.cursorrules`.
 - Never use venvs. When project-specific environments are needed, use conda.
 - Minimize use of emojis, especially in code and docs.
+- Never edit the global CLAUDE.md (/Users/aravhawk/.claude/CLAUDE.md) file.
 
 ## Workflow Discipline
 
@@ -27,6 +28,8 @@
 ### Self-Improvement Loop
 - After ANY correction: add the mistake pattern and a prevention rule to `tasks/lessons.md`.
 - At session start, review `tasks/lessons.md` for the relevant project (if it exists).
+- Prune `tasks/lessons.md` aggressively: if a lesson becomes redundant, outdated, or no longer needed (e.g., the underlying code/API changed, or the rule was promoted into `CLAUDE.md`/`AGENTS.md`), delete it immediately.
+- If `tasks/lessons.md` ever exceeds 500 lines, compress it by at least 40% in the same pass -- merge duplicates, tighten wording, and drop low-value entries -- to make room for new content.
 - Example entry:
   `### Incorrect import paths`
   `Pattern: Used relative imports instead of the project's alias convention.`
@@ -67,3 +70,7 @@
 - GitHub Release titles should always be in the vX.Y.Z format unless requested otherwise.
 - For asking me questions, use your inbuilt ask user question tool/feature.
 - If there is a dev server running (i.e. pnpm dev), do not mess with it.
+
+## gstack
+- Use the `/browse` skill from gstack for all web browsing. Never use `mcp__claude-in-chrome__*` tools.
+- Available gstack skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/design-shotgun`, `/design-html`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/connect-chrome`, `/qa`, `/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/retro`, `/investigate`, `/document-release`, `/codex`, `/cso`, `/autoplan`, `/plan-devex-review`, `/devex-review`, `/careful`, `/freeze`, `/guard`, `/unfreeze`, `/gstack-upgrade`, `/learn`.
