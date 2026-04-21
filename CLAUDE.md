@@ -1,5 +1,6 @@
 # Core rules (must follow)
-- Make every change as simple as possible, but as complex as necessary. ("We need things to be as complex as necessary, but as simple as possible" – Jensen Huang, 2026)
+- Make every change as simple as possible, but as complex as necessary. Senior-engineer test: if they'd call it overcomplicated, rewrite it. No speculative features, abstractions for single-use code, or unrequested "flexibility".
+- Think before coding. State assumptions explicitly; if multiple interpretations exist, present them -- don't pick silently. If something is unclear, stop and ask rather than guess.
 - Always trace issues to their root cause and fix permanently -- never patch over symptoms.
 - Default to web search for technical docs, API references, code examples, and any factual content (e.g., current info for portfolios, showcases, or apps) -- don't rely on training data for specifics that may be outdated.
 - Plan every edge case when architecting any plan/product/feature.
@@ -35,7 +36,14 @@
   `Pattern: Used relative imports instead of the project's alias convention.`
   `Rule: Always check existing imports in the file before adding new ones. Match the project's import style.`
 
+### Surgical Changes
+- Touch only what the task requires. Don't "improve" adjacent code, comments, or formatting; don't refactor what isn't broken.
+- Match existing style even if you'd do it differently. If you spot unrelated dead code, mention it -- don't delete it.
+- Clean up only your own mess: remove imports/variables/functions your changes made unused; leave pre-existing dead code alone unless asked.
+- Test: every changed line should trace directly to the user's request.
+
 ### Verification Before Done
+- Define verifiable success criteria before implementing. "Fix the bug" → "write a test that reproduces it, then make it pass." Strong criteria let you loop independently; weak ones ("make it work") cause rework.
 - Never mark a task complete without proving it works: run tests, check logs, demonstrate correctness.
 - Before presenting a solution, review it as if auditing someone else's PR. Ask: "Would I approve this in a code review?"
 - Diff behavior between main and your changes when relevant.
