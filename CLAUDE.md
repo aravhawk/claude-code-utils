@@ -30,7 +30,8 @@
 - After ANY correction: add the mistake pattern and a prevention rule to `tasks/lessons.md`.
 - At session start, review `tasks/lessons.md` for the relevant project (if it exists).
 - Prune `tasks/lessons.md` aggressively: if a lesson becomes redundant, outdated, or no longer needed (e.g., the underlying code/API changed, or the rule was promoted into `CLAUDE.md`/`AGENTS.md`), delete it immediately.
-- If `tasks/lessons.md` ever exceeds 500 lines, compress it by at least 40% in the same pass -- merge duplicates, tighten wording, and drop low-value entries -- to make room for new content.
+- Hard cap on `tasks/lessons.md`: 150 lines. If an addition would cross it, compress in the same pass -- merge duplicates, drop redundant or low-signal entries, tighten wording. Keep entries token-lean and info-dense: short pattern + one-line rule, never essays. Lessons are general advice for recurring pitfalls and documentation maintenance.
+- Bias against promoting lessons into `CLAUDE.md`/`AGENTS.md`. Those files are for genuinely important, durable rules that belong there from the start; default placement for everything else is `tasks/lessons.md`. A lesson only earns promotion when it has clearly become core architecture or a core rule -- not just because it has stuck around. Same discipline applies to `CLAUDE.md`/`AGENTS.md` themselves: only add what is truly important; avoid bloat.
 - Example entry:
   `### Incorrect import paths`
   `Pattern: Used relative imports instead of the project's alias convention.`
